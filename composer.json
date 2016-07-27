@@ -1,5 +1,5 @@
 {
-    "name": "aldumas/Collections",
+    "name": "aldumas/collections",
     "description": "A library of collection classes",
     "keywords": ["collection"],
     "homepage": "http://github.com/aldumas/Collections",
@@ -7,7 +7,7 @@
     "authors": [
         {
             "name": "Adam Dumas",
-            "email": "adumas@gmail.com"
+            "email": "dev@caliandadam.com"
         }
     ],
     "require": {
