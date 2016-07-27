@@ -1,0 +1,24 @@
+{
+    "name": "aldumas/Collections",
+    "description": "A library of collection classes",
+    "keywords": ["collection"],
+    "homepage": "http://github.com/aldumas/Collections",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Dumas",
+            "email": "adumas@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "aldumas\\Collections\\": "src\\"
+        }
+    }
+}
