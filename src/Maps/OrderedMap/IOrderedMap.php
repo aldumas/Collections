@@ -8,7 +8,7 @@ namespace aldumas\Collections\Maps\OrderedMap;
  *
  * Duplicate keys are not allowed.
  *
- * @package aldumas\Containers
+ * @package aldumas\Collections
  */
 interface IOrderedMap extends \Countable {
     /**
@@ -19,7 +19,7 @@ interface IOrderedMap extends \Countable {
      * integer keys, e.g. '42' is a different key than 42.
      * @param $value mixed value
      * @param integer|null $pos, positive integer position or null to append
-     * @return OrderedMap $this
+     * @return IOrderedMap $this
      * @throw DuplicateKeyException if key already exists in the container
      * @throw InvalidArgumentException if $key is not a string or integer, or
      * if $pos is neither null nor a positive integer.

@@ -14,7 +14,7 @@ use aldumas\Collections\Exceptions\KeyNotFoundException;
  *
  * This implementation is serializable.
  *
- * @package aldumas\Containers
+ * @package aldumas\Collections
  */
 class ArrayOrderedMap implements IOrderedMap {
     protected $valuesByKey = [];
