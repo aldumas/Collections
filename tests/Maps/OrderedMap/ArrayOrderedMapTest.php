@@ -23,6 +23,9 @@ class ArrayOrderedMapTest extends PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider  insertTypesProvider
+     * @param $key int|string
+     * @param $value mixed
+     * @param $message string failure description
      */
     public function testInsertTypes($key, $value, $message) {
         $map = new ArrayOrderedMap();
@@ -72,11 +75,11 @@ class ArrayOrderedMapTest extends PHPUnit_Framework_TestCase
 
     public function testInsertLargePosThenSmallPosOrder() {
         $map = new ArrayOrderedMap();
-        $map->insert("Alpha", 42, 500); //reindexed to count($map)
-        $map->insert("Beta", 5432, 100);  //reindexed to count($map)
+        $map->insert("Alpha", 42, 500); //re-indexed to count($map)
+        $map->insert("Beta", 5432, 100);  //re-indexed to count($map)
 
         //expect Beta to cover AFTER Alpha even though $pos was less since the
-        //container reindexes.
+        //container re-indexes.
 
         $values = iterator_to_array($map->inPositionOrder());
         $this->assertEquals(42, $values[0]);
