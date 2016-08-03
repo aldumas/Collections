@@ -78,13 +78,15 @@ class ArrayOrderedMap implements IOrderedMap {
     public function inPositionOrder($reverse=false) {
         if ($reverse) {
             for ($j = count($this->valuesByPosition) - 1; $j >= 0; --$j) {
-                yield $j => $this->getValueFromPositionValueContainer(
+                $value = $this->getValueFromPositionValueContainer(
                     $this->valuesByPosition[$j]);
+                yield $j => $value;
             }
         }  else {
             for ($j = 0; $j < count($this->valuesByPosition); ++$j) {
-                yield $j => $this->getValueFromPositionValueContainer(
+                $value = $this->getValueFromPositionValueContainer(
                     $this->valuesByPosition[$j]);
+                yield $j => $value;
             }
         }
     }
@@ -98,7 +100,8 @@ class ArrayOrderedMap implements IOrderedMap {
 
         for ($j = 0; $j < count($keys); ++$j) {
             $key = $keys[$j];
-            yield $key => $this->valuesByKey[$this->getInternalKey($key)];
+            $value = $this->valuesByKey[$this->getInternalKey($key)];
+            yield $key => $value;
         }
     }
 
